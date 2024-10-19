@@ -81,6 +81,7 @@ function displayNewTimer(timerID, duration) {
     const seconds = duration % 60;
 
     timerDiv.innerHTML = `
+        <span class="timer-label">Time Left: </span>
         <span class="time-left">${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}</span>
         <button class="delete-button" onclick="stopTimer(${timerID})">Delete</button>
     `;
